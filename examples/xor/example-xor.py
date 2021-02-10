@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 from lapart import train,test
 
-xtrain = pd.read_csv('xor_train.csv').as_matrix()
-xAtest = pd.read_csv('xor_test.csv').as_matrix()
+xtrain = pd.read_csv('xor_train.csv').values         # .as_matrix() is deprecated. Use '.values' instead
+xAtest = pd.read_csv('xor_test.csv').values
 xAtrain,xBtrain = xtrain[:,0:2],xtrain[:,2:3]
 
 rA,rB = 0.8,0.8
